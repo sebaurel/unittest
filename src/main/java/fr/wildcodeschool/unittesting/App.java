@@ -1,4 +1,4 @@
-package fr.wildcodeschool.quetes;
+package fr.wildcodeschool.unittesting;
 
 /**
  * Hello world!
