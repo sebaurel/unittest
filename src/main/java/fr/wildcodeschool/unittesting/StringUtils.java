@@ -19,4 +19,18 @@ public class StringUtils {
         }
         return vowels;
     }
+
+    public static String uniqueVowels(String candidate) {
+        String vowels = "";
+        if (candidate != null){
+            char[] letters = candidate.toCharArray();
+            for (int i = 0; i < candidate.length(); i++) {
+                if (ALL_VOWELS.indexOf(letters[i]) >= 0 && vowels.indexOf(letters[i]) == -1) {
+                    vowels += letters[i];
+                }
+            }
+        }
+        return vowels;
+    }
+
 }

@@ -27,34 +27,24 @@ public class StringUtilsTest {
     }
 
     @Test
-    public void seulementVoyelle(){
-        assertEquals("aeiouy", StringUtils.vowels("aeiouy"));
-    }
-
-    @Test
-    public void voyelleDerniereLettre(){
-        assertEquals("y", StringUtils.vowels("pfjgky"));
-    }
-
-    @Test
     public void pasDeVoyelle(){
         assertEquals("", StringUtils.vowels("hdjfklsm"));
     }
 
+    //Test de la methode uniqueVowels ----------------------------
     @Test
     public void longueChaine(){
-        assertEquals("iuoioyuiyuioiueaeiouayy", StringUtils.vowels("dfrtiuoplkiojhgtyuidhgyuiklmpoiufdsetaeissouggmlpatysy"));
+        assertEquals("oui", StringUtils.uniqueVowels("ouioui"));
     }
 
     @Test
     public void unCaractereVoyelle(){
-        assertEquals("a", StringUtils.vowels("a"));
+        assertEquals("a", StringUtils.uniqueVowels("abba"));
     }
 
     @Test
     public void unCaractereConsonne(){
-        assertEquals("", StringUtils.vowels("D"));
+        assertEquals("O", StringUtils.uniqueVowels("hdjOfklsm"));
     }
-
 
 }
